@@ -7,12 +7,32 @@ window.onload = function(){
 function display() {
   var today = new Date();
   var h = today.getHours();
+  hDisplay = h;
+  ampm = "AM";
   var m = today.getMinutes();
   var s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById("timed").innerHTML = h + ":" + m + ":" + s;
+
+  if(h>=13){
+    hDisplay = h-12;
+    ampm = "PM";
+  }else{
+    ampm = "AM";
+  }
+
+  document.getElementById("timed").innerHTML = hDisplay + ":" + m + ":" + s + " "+ampm;
   var t = setTimeout(function(){display()}, 500);
+
+  var a;
+  if((ampm == "AM")&&(hDisplay<=8)){ //ambience calculator
+    a = (8-hDisplay)/16;//before 8am, max = 0.5 opacity
+  }else if((ampm == "PM")&&(hDisplay>=8)){
+    var a = hDisplay/24; //after 10pm, max = 0.5 opacity
+  }else{
+
+  }
+  document.getElementById("ambience").style = "background: rgba(0, 0, 0, "+a.toString()+")";
 }
 
 function checkTime(i) {//adjusts for 10 display
