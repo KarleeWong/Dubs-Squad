@@ -40,13 +40,12 @@ function showPosition(position) {
 
 function FindQuote() {
   var quotionary = ['Bike whenever possible to improve excise habits and to cut car emissions.',
-          'Compost your food scraps.', 'Use a resusable bag.', 'Try resusable toilet paper.',
-          'Washing your clothing less often can minimize harmful microfibers that enter the ecosystem, expecially denim.',
-          'heheh hi dubhacks! :3. (UwU), ˄·͈༝·͈˄₍˄·͈༝·͈˄( ͒ ु•·̫• ू ͒)˄·͈༝·͈˄₎˄·͈༝·͈˄₎'
+          'Try beeswax wrap instead of plastic wrap.', 'Use a resusable bag.', 'Bring a reusable water bottle.',
+          'Choose chicken over lamb or beef.','Fix leaky pipes as soon as possible.'
   ];
 
-  var seachTerms = ['bikingigood for health and environment', 'composting food waste',
-  'reusable bags', 'reusable toilet paper', 'washing clothing less', 'weebaboo'];
+  var seachTerms = ['biking is good for health and environment', 'beeswax wrap',
+  'reusable bags', 'reusable water bottles', 'sustainability of chicken and red meats', 'ways to save water'];
 
  var random = Math.floor(Math.random() * quotionary.length);
  var quote = quotionary[random];
@@ -56,8 +55,5 @@ function FindQuote() {
   document.getElementById("searchID").onclick = function () {
     window.open("https://www.google.com/search?q="+search);
   }
+  document.getElementById("imgp").innerHTML = "<img src='Images/"+(random+1).toString()+".png' alt='image'>";
 }
-
-//----------------------------------------------------------------------------
-
-
