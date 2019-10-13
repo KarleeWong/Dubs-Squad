@@ -45,7 +45,7 @@ function FindQuote() {
           'heheh hi dubhacks! :3. (UwU), ˄·͈༝·͈˄₍˄·͈༝·͈˄( ͒ ु•·̫• ू ͒)˄·͈༝·͈˄₎˄·͈༝·͈˄₎'
   ];
 
-  var seachTerms = ['biking is good for health and environment', 'composting food waste',
+  var seachTerms = ['bikingigood for health and environment', 'composting food waste',
   'reusable bags', 'reusable toilet paper', 'washing clothing less', 'weebaboo'];
 
  var random = Math.floor(Math.random() * quotionary.length);
@@ -54,7 +54,7 @@ function FindQuote() {
 
   document.getElementById("quoteID").innerHTML = quote;
   document.getElementById("searchID").onclick = function () {
-    window.open("https://www.google.com/serach?q="+search);
+    window.open("https://www.google.com/search?q="+search);
   }
 }
 
