@@ -28,9 +28,9 @@ function display() {
   if((ampm == "AM")&&(hDisplay<=8)){ //ambience calculator
     a = (8-hDisplay)/16;//before 8am, max = 0.5 opacity
   }else if((ampm == "PM")&&(hDisplay>=8)){
-    var a = hDisplay/24; //after 10pm, max = 0.5 opacity
+    a = hDisplay/24; //after 10pm, max = 0.5 opacity
   }else{
-
+    a = 0;
   }
   document.getElementById("ambience").style = "background: rgba(0, 0, 0, "+a.toString()+")";
 }
