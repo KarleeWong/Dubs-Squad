@@ -32,8 +32,8 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  document.getElementById("loc").innerHTML = "Coordinates - Latitude: " + position.coords.latitude +
-  " Longitude: " + position.coords.longitude;
+  document.getElementById("loc").innerHTML = "Coordinates - Latitude: " + position.coords.latitude.toFixed(2) +
+  " Longitude: " + position.coords.longitude.toFixed(2);
 }
 
 //----------------------------------------------------------------------------
